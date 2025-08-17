@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: >
-  Best-practice CloudFormation template with GitSync that creates IAM Users,
+  CloudFormation template with GitSync that creates IAM Users,
   IAM Groups with least-privilege policies, and a one-time password stored in Secrets Manager.
 
 Parameters:
@@ -46,8 +46,6 @@ Resources:
         PasswordLength: !Ref PasswordLength
         ExcludeCharacters: "\"@/\\"
         RequireEachIncludedType: true
-      RotationRules:
-        AutomaticallyAfterDays: 7   # Secret will be valid for 7 days before rotation
 
   # -------------------------------
   # 2. IAM Groups with Policies
