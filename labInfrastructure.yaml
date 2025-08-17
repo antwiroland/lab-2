@@ -1,6 +1,6 @@
 AWSTemplateFormatVersion: "2010-09-09"
 Description: >
-  CloudFormation template with GitSync that creates IAM Users,
+  Best-practice CloudFormation template with GitSync that creates IAM Users,
   IAM Groups with least-privilege policies, and a one-time password stored in Secrets Manager.
 
 Parameters:
@@ -102,6 +102,6 @@ Outputs:
 
   OneTimePasswordSecretARN:
     Description: ARN of the one-time password stored in Secrets Manager
-    Value: !Ref OneTimePasswordSecret
+    Value: !Ref OneTimePasswordSecret1
     Export:
       Name: !Sub "${AWS::StackName}-PasswordSecret"
