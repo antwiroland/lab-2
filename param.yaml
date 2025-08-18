@@ -1,3 +1,8 @@
 template-file-path: labInfrastructure.yaml
-parameters: {}
+parameters:
+  S3UserName: s3-user-roland
+  EC2UserName: ec2-user-roland
+  PasswordLength: '12'
+  S3GroupName: S3ReadOnlyGroup
+  EC2GroupName: EC2ReadOnlyGroup
 tags: {}
